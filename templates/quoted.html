@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+
+<p> The price of one {{item.name}} share is {{usd_f(item.price)}}. </p> 
+
+
+
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    List
+{% endblock %}
+
+{% block main %}
+    <form action="/list" method="post">
+        <div class="mb-3">
+
+            <!-- <select name="listings">
+
+                <!-- 'SELECT' label -->
+                <!-- <option>SELECT</option>
+                
+                {% for listing in listings %}
+                <option>{{ listing["item"] }}</option>
+                {% endfor %}
+            </select> --> 
+
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="item" placeholder="Item" required type="text">
+        </div>
+
+        <div class="mb-3">
+            <textarea autocomplete="off" autofocus class="form-control mx-auto w-50" rows="5" name="desc" placeholder="Description" required type="text" ></textarea>
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="price" placeholder="Price $" required type="numeric">
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="meetup" placeholder="Meet Up" required type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">List</button>
+    </form>
+
+{% endblock %}

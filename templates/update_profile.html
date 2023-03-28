@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Update profile
+{% endblock %}
+
+{% block main %}
+    <form action="/update_profile" method="post">
+        <!-- <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="new_username" name="new_username" placeholder="Username" type="text">
+        </div> -->
+
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" name="new_password" placeholder="New Password" type="password">
+        </div>
+
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" name="confirmation" placeholder="Confirm New Password" type="password">
+        </div>
+
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" name="new_email" placeholder="Change Email" type="text">
+        </div>
+
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" name="new_contact_number" placeholder="Change Contact Number" type="integer">
+        </div>
+
+        <button class="btn btn-primary" type="submit">Register</button>
+    </form>
+{% endblock %}

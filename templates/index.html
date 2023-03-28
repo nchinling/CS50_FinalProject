@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Seller</th>
+            <th>Item</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Meetup</th>
+        </tr>
+
+    </thead>
+
+    <tbody>
+        {% for list in listing %}
+        <tr>
+            <td>{{ list["time"]}}</td>
+
+            <!-- Email seller if person is interested to purchase -->
+            <td><a href="mailto:{{ list["email"] }}?subject=Interested to buy : {{list["item"]}}">{{ list["username"] }}</a></td>
+            <td>{{ list["item"]}}</td>
+            <td>{{ list["desc"]}}</td>
+            <td>{{ usd(list["price"]) }}</td>
+            <td>{{ list["meetup"] }}</td>
+        </tr>
+        {% endfor %}
+
+    </tbody>
+
+</table>
+
+
+{% endblock %}
+
+
